@@ -1,0 +1,129 @@
+.c-btn {
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  max-width: 100%;
+  border: 0;
+  outline: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: background-color .2s ease;
+}
+.c-btn.c-btn_default:disabled{
+  background-color: $color-tertiary_light;
+}
+
+.c-btn_md {
+  padding: 5px 10px;
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+@media (min-width: $bp-lg) {
+  .c-btn_md {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+}
+
+
+.c-btn_lg {
+  padding: 6px 30px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+@media (min-width: $bp-lg) {
+  .c-btn_lg {
+    padding: 8px 50px;
+    font-size: 14px;
+  }
+  .c-btn_md.c-btn_ico {
+    padding-right: 20px;
+  }
+}
+
+.c-btn_default {
+  border-radius: 5px;
+}
+
+.c-btn_default.c-btn_primary {
+  background-color: $color-secondary;
+  color: $color-lightest;
+}
+
+.c-btn_default.c-btn_secondary {
+  background-color: $color-tertiary;
+  color: $color-lightest;
+}
+
+.c-btn_ico .c-btn__icon {
+  margin-right: 8px;
+}
+
+@media (min-width: $bp-lg) {
+  .c-btn_ico .c-btn__icon {
+    margin-right: 15px;
+  }
+}
+.c-link{
+
+  &_default{
+    text-decoration: none;
+  }
+  &_default:hover,&_default:focus{
+    text-decoration: underline;
+  }
+  &_primary{
+    color: $color_primary;
+  }
+}
+
+.c-btn_main{
+  margin-bottom: 36px;
+}
+
+
+.c-profile-btn {
+  align-items: center;
+  padding: 10px 38px 10px 16px;
+  background-color: $color-lightest;
+  border-radius: 5px;
+  box-shadow: 0px 0px 16px rgba(136, 167, 245, 0.18);
+
+  &__img {
+    width: 35px;
+    height: 35px;
+    background-color: $color-tertiary_light;
+    border: 2px solid $color-tertiary_light;
+    border-radius: 50%;
+    margin-right: 12px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.5;
+    color: $color-tertiary_dark;
+  }
+}
+
+@media (min-width: $bp-lg) {
+  .c-profile-btn {
+    &__img {
+      width: 45px;
+      height: 45px;
+      margin-right: 16px;
+    }
+
+    &__title {
+      font-size: 14px;
+    }
+  }
+}

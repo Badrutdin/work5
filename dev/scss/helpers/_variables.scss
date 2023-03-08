@@ -1,0 +1,46 @@
+/****************************************************************************/
+/* COLORS */
+/****************************************************************************/
+$color-primary: #6666CC;
+$color-secondary: #55C97B;
+$color-tertiary: #B1B1B1;
+$color-tertiary_dark: #7C7C7C;
+$color-tertiary_light: #E6E6E9;
+$color-lightest: #FFFFFF;
+$color-light: #F8FAFF;
+$color-dark: #343434;
+$color-success: #15b500;
+$color-error: #e41924;
+$color-warning: #eb7805;
+/****************************************************************************/
+/* FONTS */
+/****************************************************************************/
+
+$font-primary: Roboto, sans-serif;
+
+/****************************************************************************/
+/* BREAKPOINTS */
+/****************************************************************************/
+
+$bp-xs: 320px;
+$bp-sm: 640px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+$bp-xl: 1366px;
+
+$grid-breakpoints: (
+	xs: 0,
+	sm: $bp-sm,
+	md: $bp-md,
+	lg: $bp-lg,
+	xl: $bp-xl
+);
+$transition_speed: .2s;
+$spacers: (
+	0:0px,
+	1:10px,
+	2:20px,
+	3:30px,
+	4:40px,
+	5:50px,
+);

@@ -1,0 +1,65 @@
+
+.c-input {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  color: $color-tertiary_dark;
+
+  & + .input-group-text {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+    color: $color-lightest;
+    background-color: $color-primary;
+  }
+}
+
+
+@media (min-width: $bp-lg) {
+  .c-input {
+    font-size: 14px;
+
+    & + .input-group-text {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  }
+}
+
+.c-input:placeholder-shown {
+  background-color: $color-tertiary_light;
+}
+
+
+.c-input-wrap {
+  width: 100%;
+  margin-bottom: 30px;
+
+  &__label {
+    margin-bottom: 5px;
+  }
+}
+
+
+@media (min-width: $bp-sm) {
+  .c-input-wrap_md {
+    width: 240px;
+  }
+}
+
+.c-label {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  color: $color-dark;
+}
+
+.c-select {
+  font-size: 12px;
+  line-height: 1.8;
+  color: $color-tertiary_dark;
+}

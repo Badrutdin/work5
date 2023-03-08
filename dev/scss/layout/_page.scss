@@ -1,0 +1,25 @@
+.page {
+  display: block;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+@media (min-width: $bp-lg) {
+  .page {
+    display: flex;
+  }
+}
+
+.content {
+  padding-left: 10px;
+  padding-right: 10px;
+  overflow: hidden;
+}
+
+@media (min-width: $bp-lg) {
+  .content {
+    flex-grow: 1;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}

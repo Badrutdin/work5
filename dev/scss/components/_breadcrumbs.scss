@@ -1,0 +1,41 @@
+.c-breadcrumbs {
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+@media (min-width: $bp-lg) {
+  .c-breadcrumbs{
+    position: absolute;
+    top: 18px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+.c-breadcrumbs__item + .c-breadcrumbs__item:before {
+  margin-right: 6px;
+  margin-left: 6px;
+  content: '>';
+}
+
+.c-breadcrumbs__title {
+  font-size: 12px;
+}
+.c-breadcrumbs__item {
+  display: inline;
+  word-break: break-all;
+}
+
+.c-breadcrumbs__link {
+  text-decoration: none;
+  color: inherit;
+  transition: text-shadow .2s ease;
+
+  &:hover, &:focus {
+    color: $color-primary;
+  }
+
+}
+
+.c-breadcrumbs__item:last-child {
+  pointer-events: none;
+  cursor: default;
+}

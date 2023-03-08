@@ -1,0 +1,77 @@
+extends ../pug/layout
+append content
+    .c-modal.mfp-hide(id="create")
+        button(type="button").c-btn.c-modal__close.modal-close
+            +svgSprite({width: 17, height: 17, name: 'm-close', class: ''})
+        form(action="ajax/callForm.json",method="POST")
+            .c-title.c-title_md Создать магазин
+            .c-form__header
+            .c-input-wrap-list
+                .c-input-wrap.c-input-wrap_md
+                    label.c-label.c-input-wrap__label(for="select_1") Шаблон
+                    select.form-select.c-select.c-select__input(name="template",id="select_1")
+                        option(value='1') Лендинг
+                        option(selected,value="2") Стандартный
+                        option(value='2') Корпоративный
+                .c-input-wrap.c-input-wrap.c-input-wrap_md
+                    label.c-label.c-input-wrap__label(for="select_2") Цветовая схема
+                    select.form-select.c-select.c-input__input(name="color_schema",id="select_2")
+                        option(value='1') Стандартная
+                        option(selected,value="2") Классическая
+                        option(value='2') Высокий контраст
+                .c-input-wrap
+                    label.c-label.c-input-wrap__label(for="input_1") Домен
+                    .input-group
+                        input(required).c-input.form-control(type='text', name="domain", placeholder="Например: ivangrozniy",id="input_1")
+                        span.input-group-text .work5.ru
+            .c-warning
+                .c-warning__img
+                    +svgSprite({width: 9, height: 29, name: 'warning', class: 'c-warning__icon'})
+                .c-warning__text В названии домена разрешены латиница и “-”, запрещается использовать словосочетание Work 5. После создания магазина Вы сможете прикрутить свой домен (например ivangrozniy.ru). Подробнее по&nbsp;
+                    a.c-link.c-link_default.c-link_primary(href="#", target="_blank") ссылке
+            .c-form-controls
+                .c-form-controls__item
+                    button(type="submit").c-btn.c-btn_lg.c-btn_default.c-btn_primary Создать
+                .c-form-controls__item
+                    button(type="button").c-btn.c-btn_lg.c-btn_default.c-btn_secondary.modal-close Отмена
+    +breadCrumbs({value: 'Мои магазины'})
+    section
+        a(href="#create").popup.c-btn.c-btn_md.c-btn_ico.c-btn_default.c-btn_primary.c-btn_main
+            +svgSprite({width: 11, height: 11, name: 'plus', class: 'c-btn__icon'})
+            | Создать свой магазин
+        h1.c-title.c-title_md Управление магазинами
+        .c-table-wrap
+            .c-table
+                .c-table__row
+                    .c-table__ceil.c-table__ceil_num.c-table__head №
+                    .c-table__ceil.c-table__ceil_name.c-table__head Название
+                    .c-table__ceil.c-table__ceil_address.c-table__head Название
+                    .c-table__ceil.c-table__ceil_action.c-table__head Действие
+                .c-table__row
+                    .c-table__ceil.c-table__ceil_num 12345
+                    .c-table__ceil.c-table__ceil_name Дипломная работа
+                    .c-table__ceil.c-table__ceil_address http://www.work5.ru/services
+                    .c-table__ceil.c-table__ceil_action
+                        ul.c-btns-list
+                            li.c-btns-list__item
+                                button(type="button").c-btn.c-btn_md.c-btn_ico.c-btn_default.c-btn_primary
+                                    +svgSprite({height: 18, width: 15, name: 'pencil', class: 'c-btn__icon'})
+                                    | Редактировать
+                            li.c-btns-list__item
+                                button(type="button").c-btn.c-btn_md.c-btn_ico.c-btn_default.c-btn_secondary
+                                    +svgSprite({height: 14, width: 13, name: 'cancel', class: 'c-btn__icon'})
+                                    | Редактировать
+                .c-table__row
+                    .c-table__ceil.c-table__ceil_num 12345
+                    .c-table__ceil.c-table__ceil_name Дипломная работа
+                    .c-table__ceil.c-table__ceil_address http://www.work5.ru/services
+                    .c-table__ceil.c-table__ceil_action
+                        ul.c-btns-list
+                            li.c-btns-list__item
+                                button(type="button").c-btn.c-btn_md.c-btn_ico.c-btn_default.c-btn_primary
+                                    +svgSprite({height: 18, width: 15, name: 'pencil', class: 'c-btn__icon'})
+                                    | Редактировать
+                            li.c-btns-list__item
+                                button(type="button").c-btn.c-btn_md.c-btn_ico.c-btn_default.c-btn_secondary
+                                    +svgSprite({height: 14, width: 13, name: 'cancel', class: 'c-btn__icon'})
+                                    | Редактировать

@@ -1,0 +1,20 @@
+mixin breadCrumbs(...items)
+    -let length = Object.keys(items).length
+    -let i = 1
+    .c-breadcrumbs
+        ul.c-breadcrumbs__list
+            li.c-breadcrumbs__item
+                a.c-breadcrumbs__link(href='#')
+                    span.c-breadcrumbs__title Главная
+            each item in items
+                if i === length
+                    li.c-breadcrumbs__item
+                        span.c-breadcrumbs__title= item.value
+                else
+                    li.c-breadcrumbs__item
+                        a.c-breadcrumbs__link(href='#')
+                            span.c-breadcrumbs__title= item.value
+                -i++
+mixin svgSprite(params)
+    svg(class= params.class,fill='none' height= params.height width=params.width xmlns='http://www.w3.org/2000/svg')
+        use(xlink:href='images/svg.svg#' + params.name xmlns='http://www.w3.org/1999/xlink')
